@@ -1,7 +1,0 @@
-Copyright (c) 2025 Atlassian
-Permission is hereby granted to use this software in accordance with the terms 
-and conditions outlined in the Atlassian Developer Terms, which can be found 
-at the following URL:
-https://developer.atlassian.com/platform/marketplace/atlassian-developer-terms/
-By using this software, you agree to comply with these terms and conditions. 
-If you do not agree with these terms, you are not permitted to use this software.

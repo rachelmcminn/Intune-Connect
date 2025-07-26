@@ -1,8 +1,0 @@
-declare const API_PERMISSIONS_MAP: {
-    readonly canRead: "read";
-    readonly canUpdate: "update";
-    readonly canDelete: "delete";
-};
-export declare type ApiPermissionsMap = typeof API_PERMISSIONS_MAP;
-export default API_PERMISSIONS_MAP;
-//# sourceMappingURL=permissions.d.ts.map
