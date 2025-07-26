@@ -10,7 +10,7 @@ modules:
       handler: index.handler
 resources:
   - key: main
-    path: static/hello-world/build
+    path: static/admin-page/build
 permissions:
   scopes:
     - storage:app
