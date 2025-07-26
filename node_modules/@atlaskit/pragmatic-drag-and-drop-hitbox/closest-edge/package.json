@@ -1,0 +1,15 @@
+{
+  "name": "@atlaskit/pragmatic-drag-and-drop-hitbox/closest-edge",
+  "main": "../dist/cjs/closest-edge.js",
+  "module": "../dist/esm/closest-edge.js",
+  "module:es2019": "../dist/es2019/closest-edge.js",
+  "sideEffects": false,
+  "types": "../dist/types/closest-edge.d.ts",
+  "typesVersions": {
+    ">=4.5 <5.4": {
+      "*": [
+        "../dist/types-ts4.5/closest-edge.d.ts"
+      ]
+    }
+  }
+}

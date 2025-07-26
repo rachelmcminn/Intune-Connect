@@ -1,0 +1,15 @@
+{
+  "name": "@atlaskit/pragmatic-drag-and-drop-hitbox/tree-item",
+  "main": "../dist/cjs/tree-item.js",
+  "module": "../dist/esm/tree-item.js",
+  "module:es2019": "../dist/es2019/tree-item.js",
+  "sideEffects": false,
+  "types": "../dist/types/tree-item.d.ts",
+  "typesVersions": {
+    ">=4.5 <5.4": {
+      "*": [
+        "../dist/types-ts4.5/tree-item.d.ts"
+      ]
+    }
+  }
+}

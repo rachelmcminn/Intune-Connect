@@ -1,0 +1,57 @@
+import _classCallCheck from "@babel/runtime/helpers/classCallCheck";
+import _createClass from "@babel/runtime/helpers/createClass";
+import _defineProperty from "@babel/runtime/helpers/defineProperty";
+import { COLOR_MODE_ATTRIBUTE, THEME_DATA_ATTRIBUTE } from './constants';
+import getGlobalTheme from './get-global-theme';
+/**
+ * A MutationObserver which watches the `<html>` element for changes to the theme.
+ *
+ * In React, use the {@link useThemeObserver `useThemeObserver`} hook instead.
+ *
+ * @param {function} callback - A callback function which fires when the theme changes.
+ *
+ * @example
+ * ```
+ * const observer = new ThemeMutationObserver((theme) => {});
+ * observer.observe();
+ * ```
+ */
+var ThemeMutationObserver = /*#__PURE__*/function () {
+  function ThemeMutationObserver(callback) {
+    _classCallCheck(this, ThemeMutationObserver);
+    _defineProperty(this, "legacyObserver", null);
+    this.callback = callback;
+    ThemeMutationObserver.callbacks.add(callback);
+  }
+  return _createClass(ThemeMutationObserver, [{
+    key: "observe",
+    value: function observe() {
+      if (!ThemeMutationObserver.observer) {
+        ThemeMutationObserver.observer = new MutationObserver(function () {
+          var theme = getGlobalTheme();
+          ThemeMutationObserver.callbacks.forEach(function (callback) {
+            return callback(theme);
+          });
+        });
+        // Observer only needs to be configured once
+        ThemeMutationObserver.observer.observe(document.documentElement, {
+          attributeFilter: [THEME_DATA_ATTRIBUTE, COLOR_MODE_ATTRIBUTE]
+        });
+      }
+    }
+  }, {
+    key: "disconnect",
+    value: function disconnect() {
+      if (this.callback) {
+        ThemeMutationObserver.callbacks.delete(this.callback);
+      }
+      if (ThemeMutationObserver.callbacks.size === 0 && ThemeMutationObserver.observer) {
+        ThemeMutationObserver.observer.disconnect();
+        ThemeMutationObserver.observer = null;
+      }
+    }
+  }]);
+}();
+_defineProperty(ThemeMutationObserver, "observer", null);
+_defineProperty(ThemeMutationObserver, "callbacks", new Set());
+export { ThemeMutationObserver as default };

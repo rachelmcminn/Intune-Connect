@@ -1,0 +1,15 @@
+{
+  "name": "@atlaskit/pragmatic-drag-and-drop-hitbox/util/get-reorder-destination-index",
+  "main": "../../dist/cjs/get-reorder-destination-index.js",
+  "module": "../../dist/esm/get-reorder-destination-index.js",
+  "module:es2019": "../../dist/es2019/get-reorder-destination-index.js",
+  "sideEffects": false,
+  "types": "../../dist/types/get-reorder-destination-index.d.ts",
+  "typesVersions": {
+    ">=4.5 <5.4": {
+      "*": [
+        "../../dist/types-ts4.5/get-reorder-destination-index.d.ts"
+      ]
+    }
+  }
+}
