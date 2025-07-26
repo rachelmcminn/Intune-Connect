@@ -1,0 +1,30 @@
+modules:
+  jira:adminPage:
+    - key: intune-connect-custom-admin-page
+      resource: main
+      resolver:
+        function: resolver
+      title: Intune Connect Custom
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+permissions:
+  scopes:
+    - storage:app
+    - 'write:jira-work'
+  external:
+    fetch:
+      backend:
+        - "https://login.microsoftonline.com"
+        - "https://graph.microsoft.com"
+        - "https://api.atlassian.com"
+  content:
+    styles:
+      - 'unsafe-inline'
+app:
+  runtime:
+    name: nodejs22.x
+  id: ari:cloud:ecosystem::app/d0d08eb8-6fb6-4fd4-88a3-084f049be1c3

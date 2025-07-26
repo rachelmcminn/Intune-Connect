@@ -1,0 +1,61 @@
+
+.panel-area {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.margin-t-s {
+    margin-top: 8px;
+}
+
+.margin-b-s {
+    margin-bottom: 8px;
+}
+
+.margin-t-b {
+    margin-top: 16px;
+}
+
+.margin-b-b {
+    margin-bottom: 16px;
+}
+
+
+.flex-col-8 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+.label {
+   color: #74797e;
+}
+
+.tab-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.formDiv {
+    max-width: 460px;
+    padding-bottom: 16px;
+}
+
+.label-h6 {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.value-url {
+    margin-top: -6px;
+
+}
+
+.url-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+}
